@@ -7,8 +7,11 @@ const server = http.createServer(function (req, res){
     }else if (req.url =  "/about"){
         res.end("hello from the about us side server");
     }else if (req.url = "/contact"){
-        res.write("Heloo from the contact us page");
-        res.end();
+        
+        res.end("Heloo from the contact us page");
+    }else if (req.url = "/userapi"){
+    
+        res.end("Heloo from the userAPI page");
     }else {
         res.writeHead(200 , {"Content-type" : "text/html"});
         res.end("<h1> 404 error pages . Page not found </h1>")
